@@ -168,19 +168,29 @@
 
         <!-- The Mentor Section -->
         <section id="mentor" class="py-16 bg-gray-50/50 rounded-2xl">
-            <div class="text-center mb-12">
+            <div class="text-center">
                 <h2 class="text-3xl md:text-4xl font-bold mb-2">Meet Your Mentor: Umesh Ratan Singh Sugara</h2>
                 <p class="text-lg text-gray-600 max-w-2xl mx-auto">Learn from an expert who has successfully navigated the path you're on.</p>
             </div>
+            <!-- Main flex container (vertically centers left column vs right column) -->
             <div class="flex flex-col md:flex-row items-center gap-8 md:gap-12">
-                <div class="md:w-1/3 text-center md:text-left">
-                    <!-- Note: Google Drive view links are not directly embeddable. Please provide a direct image URL or upload the image directly. -->
+                <!-- Left Column: Image and Text Block Container -->
+                <!-- ADDED FLEX, FLEX-COL, JUSTIFY-CENTER, ITEMS-CENTER to this div -->
+                <div class="md:w-1/3 text-center md:text-left flex flex-col justify-center items-center">
+                    <!-- Image (Now a direct child of the flex column) -->
                     <img src="https://raw.githubusercontent.com/umesh-sugara/mentorship/main/img.jpg" alt="Umesh Ratan Singh Sugara" class="w-48 h-48 rounded-full mx-auto md:mx-0 mb-4 shadow-lg object-cover" style="width: 200px; height: 200px; object-fit: cover; object-position: 70% 25%; transform: scale(1.2);">
-                    <h3 class="text-2xl font-bold">Umesh Ratan Singh Sugara</h3>
-                    <p class="text-primary font-semibold">Software Engineer at GlobalLogic (Google Onsite)</p>
-                    <p class="text-gray-600 mt-2">Ex-Idcube, Ex-Paytm, Ex-Analytics Vidhya</p>
-                    <p class="mt-4 text-gray-700">With 3+ years of experience in AI/ML and GenAI, I've delivered massive cost savings and efficiency gains at top companies. Having graduated recently in 2022, I know the fresher job market inside-out and can give you the exact, up-to-date guidance you need to succeed.</p>
+        
+                    <!-- Text Block Wrapper (NEW DIV - This groups all the text) -->
+                    <!-- This div is now the second direct child of the flex column -->
+                    <div>
+                        <h3 class="text-2xl font-bold">Umesh Ratan Singh Sugara</h3>
+                        <p class="text-primary font-semibold">Software Engineer at GlobalLogic (Google Onsite)</p>
+                        <p class="text-gray-600 mt-2">Ex-Idcube, Ex-Paytm, Ex-Analytics Vidhya</p>
+                        <p class="mt-4 text-gray-700">With 3+ years of experience in AI/ML and GenAI, I've delivered massive cost savings and efficiency gains at top companies. Having graduated recently in 2022, I know the fresher job market inside-out and can give you the exact, up-to-date guidance you need to succeed.</p>
+                    </div>
                 </div>
+        
+                <!-- Right Column: Chart -->
                 <div class="md:w-2/3">
                     <div class="chart-container">
                         <canvas id="achievementsChart"></canvas>
